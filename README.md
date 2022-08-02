@@ -6,3 +6,7 @@ Run with:
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Ari-Weinberg/OMZSH_quick_setup/main/omzsh-setup.sh)"
 ```
+Or, if curl is not installed by default:
+```
+sh -c "$(wget -qO- https://raw.githubusercontent.com/Ari-Weinberg/OMZSH_quick_setup/main/omzsh-setup.sh)"
+```
