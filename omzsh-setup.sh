@@ -1,5 +1,7 @@
 sudo apt update
-sudo apt install zsh git curl fzf -y
+sudo apt install zsh git curl -y
+FZF_VER=$(curl -s https://api.github.com/repos/junegunn/fzf/releases/latest | grep -oP '"tag_name":\s*"v\K[0-9.]+')
+sudo wget https://github.com/junegunn/fzf/releases/download/v$FZF_VER/fzf-$FZF_VER-linux_amd64.tar.gz -O /tmp/fzf.tar.gz && sudo tar xzf /tmp/fzf.tar.gz -C /usr/local/bin
 sudo apt install eza -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 zsh -c "git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
